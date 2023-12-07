@@ -68,3 +68,9 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- コメント挿入用のクエリ
+INSERT INTO comments (name, email, comment, subject, date) VALUES (?, ?, ?, ?, ?);
+
+-- 今日のコメントを取得するクエリ
+SELECT name, email, comment, subject, date FROM comments WHERE date = ?;
